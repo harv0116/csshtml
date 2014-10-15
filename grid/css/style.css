@@ -1,0 +1,77 @@
+*
+{
+	box-sizing: border-box;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: ".";
+     clear: both;
+     height: 0;
+     }
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+
+html[xmlns] .clearfix { display: block; }
+/* close commented backslash hack */
+
+body {
+	/*outline: 1px solid red;*/
+	color: #000000;
+}
+
+.wrapper {
+	/*max-width: 960px;*/
+	margin: 0 auto;
+	background: blue;
+
+}
+
+header, footer {
+	background: red;
+}
+/***** GRID STYLES ******/
+.col-container {
+	border: 3px solid darkcyan;
+}
+
+.col-2, .col-3{
+	margin: 4rem 0;
+	padding: 1rem;
+	background: yellow;
+}
+
+@media all and (min-width: 600px) {
+	.col-2 {
+		float: left;
+		width: 50%;	
+
+	}
+}
+
+/****** COLUMN 3 ******/
+
+.col-3 {
+	background: green;
+}
+
+@media all and (min-width: 600px) {
+	.col-3 {
+		float: left;
+		width: 29.33%;	
+		margin-left: 6px;
+
+	}
+	.col-3:first-child {
+		margin-left: 0;
+	}
+}
+
+.col-4 {
+	margin: 4rem 0;
+	
+}
